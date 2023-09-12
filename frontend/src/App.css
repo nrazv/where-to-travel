@@ -1,0 +1,6 @@
+.App {
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  max-height: 90vh;
+}
