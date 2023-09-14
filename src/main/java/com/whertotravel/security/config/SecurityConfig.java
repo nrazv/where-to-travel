@@ -15,18 +15,28 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableWebSecurity
 public class SecurityConfig {
 
-  @Bean
-  public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-
-    httpSecurity
-      .httpBasic().and()
-      .authorizeHttpRequests(authorize ->
-        authorize.requestMatchers(Config.API_V_1 + "user").permitAll()
-          .requestMatchers(Config.API_V_1 + "destination").authenticated()
-          .requestMatchers(Config.API_V_1 + "destination/**").permitAll()
-          .requestMatchers("/images/**").permitAll()
-          .requestMatchers(Config.API_V_1 + "user/all").authenticated()
-          .requestMatchers("db").denyAll()
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+      httpSecurity
+              .httpBasic().and()
+              .authorizeHttpRequests(authorize ->
+                      authorize
+                              .requestMatchers(
+                                      Config.API_V_1 + "user",
+                                      Config.API_V_1 + "destination/**",
+                                      "/images/**",
+                                      "/swagger-ui/**",
+                                      "/v2/api-docs",
+                                      "/v3/api-docs/**",
+                                      "/swagger-resources",
+                                      "/swagger-resources/**",
+                                      "/configuration/ui",
+                                      "/configuration/security",
+                                      "/swagger-ui/**",
+                                      "/webjars/**"
+                              ).permitAll()
+                              .requestMatchers(Config.API_V_1 + "destination", Config.API_V_1 + "user/all").authenticated()
+                              .requestMatchers("db").denyAll()
       );
     httpSecurity.cors().and().csrf().disable();
     return httpSecurity.build();
