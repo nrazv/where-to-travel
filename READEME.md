@@ -20,7 +20,7 @@ I encourage collaboration and discussion among users. Share your insights, ask q
 
 I invite you to join the community of cybersecurity enthusiasts, whether you're a beginner looking to learn the ropes or an experienced practitioner seeking new challenges.
 
-- **Explore the platform**: [Link to Your Web App]
+- **Explore the platform**: https://github.com/nrazv/where-to-travel
 
 - **Contribute**: If you're passionate about web security and want to contribute to the project, I welcome your insights, suggestions, and collaboration.
 

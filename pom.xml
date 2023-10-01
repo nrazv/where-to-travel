@@ -11,7 +11,7 @@
   <groupId>com.whertotravel</groupId>
   <artifactId>whertotravel</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>Where To Travel</name>
   <description>Where To Travel</description>
   <properties>
