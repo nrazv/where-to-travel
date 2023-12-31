@@ -3,8 +3,8 @@ spring:
     ansi:
       enabled: ALWAYS
   datasource:
-    url: jdbc:mysql://localhost:3306/travel
-    username: user
+    url: jdbc:mysql://localhost:3306/where_to_travel
+    username: root
     password: password
   jpa:
     hibernate:

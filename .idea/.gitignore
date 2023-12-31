@@ -58,6 +58,7 @@ local.properties
 *.ipr
 *.ids
 *.orig
+*.xhtml
 
 ######################
 # Visual Studio Code
@@ -69,6 +70,7 @@ local.properties
 ######################
 /log/
 /target/
+target/
 
 ######################
 # Gradle

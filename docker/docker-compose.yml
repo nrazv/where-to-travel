@@ -1,13 +1,14 @@
+version: '1.0'
 services:
   db:
+    container_name: dev_db
     image: mysql
-    restart: always
     environment:
-      MYSQL_ROOT_USER: root
+      MYSQL_DATABASE: where_to_travel
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: app
-      MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
+    expose:
+      - '3306'
     volumes:
       - ./data.sql:/docker-entrypoint-initdb.d/data.sql
