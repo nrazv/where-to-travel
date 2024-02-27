@@ -1,9 +1,14 @@
+images/
+target/
 ######################
 # Project Specific
 ######################
 /build/www/**
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
+target/**
+
+frontend/node_modules/
 
 ######################
 # Node
@@ -12,7 +17,11 @@
 node_tmp/
 node_modules/
 npm-debug.log.*
-
+../node_modules/
+../images/
+../target/
+package-lock.json
+../frontend/node_modules/
 ######################
 # SASS
 ######################
@@ -52,7 +61,7 @@ local.properties
 ######################
 # Intellij
 ######################
-.idea/
+.idea/**
 *.iml
 *.iws
 *.ipr
@@ -70,7 +79,6 @@ local.properties
 ######################
 /log/
 /target/
-target/
 
 ######################
 # Gradle
