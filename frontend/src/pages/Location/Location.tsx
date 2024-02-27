@@ -1,4 +1,3 @@
-import { json } from "body-parser";
 import { useParams } from "react-router";
 
 const Location = () => {

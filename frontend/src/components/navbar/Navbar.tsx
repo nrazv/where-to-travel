@@ -1,47 +1,25 @@
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Icon, Toolbar } from "@mui/material";
 import Link from "@mui/material/Link";
 import { NavLink } from "react-router-dom";
 import { grey } from "@mui/material/colors";
 import "./Nav.css";
+import { NavbarItems } from "./NavbarItems";
+import { NavbarItem } from "./NavbarItem";
 
 const Navbar = () => {
+  const navItems = NavbarItems.map((navItem: NavbarItem) => (
+    <NavLink to={navItem.navLink} className={`px-4 flex flex-col items-center`}>
+      <Icon>{navItem.icon}</Icon>
+      <Link color={grey[100]} component="button">
+        {navItem.text}
+      </Link>
+    </NavLink>
+  ));
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Where To Travel
-          </Typography>
-          <NavLink to="signup">
-            <Link  color={grey[100]} component="button" variant="body1">
-              Sign Up
-            </Link>
-          </NavLink>
-          <NavLink to="login">
-            <Link
-              sx={{ padding: "1rem" }}
-              color={grey[100]}
-              component="button"
-              variant="body1"
-            >
-              Login
-            </Link>
-          </NavLink>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            <Link
-              sx={{ padding: "1rem" }}
-              color={grey[100]}
-              component="button"
-              variant="body1"
-            >
-              Home
-            </Link>
-          </NavLink>
-        </Toolbar>
+        <Toolbar className={`flex-row-reverse`}>{navItems}</Toolbar>
       </AppBar>
     </Box>
   );
