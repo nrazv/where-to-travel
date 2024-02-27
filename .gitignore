@@ -7,8 +7,11 @@ target/
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
 target/**
-
+images/
+target/
 frontend/node_modules/
+.idea/workspace.xml
+
 
 ######################
 # Node
