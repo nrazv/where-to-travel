@@ -25,6 +25,7 @@ npm-debug.log.*
 ../target/
 package-lock.json
 ../frontend/node_modules/
+frontend/package-lock.json
 ######################
 # SASS
 ######################
