@@ -3,12 +3,11 @@ import React, { useEffect, useState } from "react";
 import { UserCredentials } from "../../shared/types/user/UserCredentials";
 import loginRequest from "../../api/requests/loginRequest";
 import { useNavigate } from "react-router-dom";
-import { useAuthContext } from "../../context/AuthProvider";
-import './Login.css'
+import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { auth, setAuth } = useAuthContext();
+  // const { auth, setAuth } = useAuthContext();
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -25,8 +24,6 @@ const Login = () => {
 
   const loginUser = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    console.log(auth, setAuth);
 
     try {
       const response = await loginRequest(credentials);

@@ -3,8 +3,6 @@ import { useParams } from "react-router";
 const Location = () => {
   const { locationId } = useParams();
 
-  console.log(locationId);
-
   return (
     <div>
       <h3>Params</h3>

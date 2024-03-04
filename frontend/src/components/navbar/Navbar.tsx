@@ -8,7 +8,11 @@ import { NavbarItem } from "./NavbarItem";
 
 const Navbar = () => {
   const navItems = NavbarItems.map((navItem: NavbarItem) => (
-    <NavLink to={navItem.navLink} className={`px-4 flex flex-col items-center`}>
+    <NavLink
+      to={navItem.navLink}
+      key={navItem.navLink}
+      className={`px-4 flex flex-col items-center`}
+    >
       <Icon>{navItem.icon}</Icon>
       <Link color={grey[100]} component="button">
         {navItem.text}

@@ -4,7 +4,6 @@ import { UserCreateRequest } from "../../shared/types/user/UserCreateRequest";
 import "./Signup.css";
 import axios, { AxiosResponse } from "axios";
 import { useNavigate } from "react-router-dom";
-import baseUrl from "../../shared/baseUrl";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,23}$/;
 const NAME_REGEX = /^[a-zA-Z]{2,23}/;
@@ -56,8 +55,6 @@ const Signup: React.FC = () => {
   useEffect(() => {
     if (password) {
       const isPasswordValid = PASSWORD_REGEX.test(password);
-      console.log(isPasswordValid);
-
       setValidPassword(isPasswordValid);
 
       if (isPasswordValid && passwordConfirmation?.length) {
@@ -71,7 +68,7 @@ const Signup: React.FC = () => {
     setLoading(true);
     event.preventDefault();
     const response: AxiosResponse = await axios.post<AxiosResponse>(
-      `${baseUrl}/user`,
+      `${process.env.REACT_APP_API_URL}/user`,
       user,
       {
         headers: {

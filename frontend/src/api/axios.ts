@@ -1,6 +1,5 @@
 import axios from "axios";
-import baseUrl from "../shared/baseUrl";
 
 export default axios.create({
-  baseURL: baseUrl(),
+  baseURL: process.env.REACT_APP_API_URL,
 });
