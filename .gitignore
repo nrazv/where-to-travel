@@ -153,3 +153,7 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+.idea/workspace.xml
+frontend/package-lock.json
+target/classes/com/whertotravel/security/config/SecurityConfig.class
+target/classes/com/whertotravel/security/config/SecurityConfig$1.class
