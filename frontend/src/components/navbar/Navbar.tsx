@@ -5,12 +5,13 @@ import { grey } from "@mui/material/colors";
 import "./Nav.css";
 import { NavbarItems } from "./NavbarItems";
 import { NavbarItem } from "./NavbarItem";
+import { nanoid } from "nanoid";
 
 const Navbar = () => {
   const navItems = NavbarItems.map((navItem: NavbarItem) => (
     <NavLink
       to={navItem.navLink}
-      key={navItem.navLink}
+      key={nanoid()}
       className={`px-4 flex flex-col items-center`}
     >
       <Icon>{navItem.icon}</Icon>

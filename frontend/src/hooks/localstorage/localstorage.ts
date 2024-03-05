@@ -1,4 +1,3 @@
-const localstotage = () => {};
 const localStorage = () => {
   console.log("Hello");
 };
