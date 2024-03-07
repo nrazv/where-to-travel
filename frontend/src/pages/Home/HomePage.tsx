@@ -1,16 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllDestinations } from "../../hooks/data/destination";
 import Destination from "../../components/destination/Destination";
 import { DestinationResponse } from "../../shared/types/location/DestinationResponse";
 import "./HomePage.css";
 import LoadingLogo from "../../shared/loading-logo/LoadingLogo";
 import { Alert, AlertTitle } from "@mui/material";
 import { AxiosResponse } from "axios";
+import { apiServiceProvider } from "../../api/ApiService";
 
 const HomePage: React.FC = () => {
+  const apiService = apiServiceProvider();
   const { error, isLoading, data } = useQuery<
     AxiosResponse<DestinationResponse[]>
-  >(["destinations-all"], getAllDestinations);
+  >(["destinations-all"], apiService.get("destination/all"));
 
   if (error) {
     return (

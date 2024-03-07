@@ -1,6 +1,6 @@
 import { Button, CircularProgress, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { UserCreateRequest } from "../../shared/types/user/UserCreateRequest";
+import { UserCreateRequest } from "./UserCreateRequest";
 import "./Signup.css";
 import axios, { AxiosResponse } from "axios";
 import { useNavigate } from "react-router-dom";

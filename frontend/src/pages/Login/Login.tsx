@@ -1,6 +1,6 @@
 import { Alert, Button, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { UserCredentials } from "../../shared/types/user/UserCredentials";
+import { UserCredentials } from "./UserCredentials";
 import loginRequest from "../../api/requests/loginRequest";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -27,7 +27,6 @@ const Login = () => {
 
     try {
       const response = await loginRequest(credentials);
-
       if (response.status === 200) {
         navigate("/");
       }
