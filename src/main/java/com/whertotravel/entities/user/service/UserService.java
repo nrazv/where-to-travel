@@ -1,13 +1,13 @@
 package com.whertotravel.entities.user.service;
 
 
+import com.whertotravel.entities.authentication.models.UserRegisterRequest;
 import com.whertotravel.entities.user.model.User;
-import com.whertotravel.entities.user.model.UserCreateRequest;
 
 import java.util.List;
 
 public interface UserService {
-  User saveNewUser(UserCreateRequest user);
+    User saveNewUser(UserRegisterRequest user);
 
-  List<User> getAll();
+    List<User> getAll();
 }

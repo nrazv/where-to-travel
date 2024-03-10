@@ -4,17 +4,79 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b028293-3f94-4f7d-9cac-b088c1fd8063" name="Changes" comment="" />
+    <list default="true" id="8b028293-3f94-4f7d-9cac-b088c1fd8063" name="Changes" comment="Implement JWT authorization">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whertotravel/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whertotravel/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/models/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/models/UserRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/service/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/authentication/service/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/destination/controller/DestinationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whertotravel/entities/destination/controller/DestinationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/ServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/WhereToTravelApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/config/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/config/WebConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/comment/model/Comment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/destination/controller/DestinationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/destination/mapper/DestinationMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/like/model/Like.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/user/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/user/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/user/mapper/UserMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/user/model/UserCreateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/user/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/entities/user/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/filestorage/config/StorageProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/filestorage/exceptions/StorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/filestorage/exceptions/StorageFileNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/security/config/SecurityConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/security/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/security/model/UserDetailsImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/whertotravel/security/service/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/whertotravel/entities/destination/mapper/DestinationMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/whertotravel/entities/destination/mapper/DestinationMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/whertotravel/entities/user/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/whertotravel/entities/user/mapper/UserMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.whertotravel.WhereToTravelApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.whertotravel.WhereToTravelApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.whertotravel.WhereToTravelApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.whertotravel.WhereToTravelApplicationTests.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Run app.executor": "Debug",
+    "Application.Unnamed.executor": "Debug",
+    "Application.WhereToTravelApplication.executor": "Debug",
+    "Maven.whertotravel [package].executor": "Run",
     "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="WhereToTravelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.whertotravel.WhereToTravelApplication" />
+      <module name="whertotravel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.whertotravel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WhereToTravelApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -22,6 +84,7 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Implement JWT authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement JWT authorization" />
   </component>
 </project>
