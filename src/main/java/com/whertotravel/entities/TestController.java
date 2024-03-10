@@ -1,14 +1,12 @@
 package com.whertotravel.entities;
 
-import com.whertotravel.config.Config;
+import com.whertotravel.config.ApplicationConfig;
 import com.whertotravel.entities.image.service.ImageService;
-import org.apache.logging.log4j.util.TriConsumer;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping(Config.API_V_1 + "file")
+@RequestMapping(ApplicationConfig.API_V_1 + "file")
 public class TestController {
     private final ImageService imageService;
 
@@ -22,7 +20,7 @@ public class TestController {
     }
 
     @GetMapping()
-    String getTest(){
-        return  "Test";
+    String getTest() {
+        return "Test";
     }
 }

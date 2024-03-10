@@ -5,9 +5,10 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
-public interface UserRepository extends CrudRepository<User, Long> {
-  Optional<User> findUserByEmail(String email);
+public interface UserRepository extends CrudRepository<User, UUID> {
+    Optional<User> findUserByEmail(String email);
 
-  List<User> findAll();
+    List<User> findAll();
 }
