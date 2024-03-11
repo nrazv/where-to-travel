@@ -153,9 +153,8 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
-.idea/workspace.xml
+.idea/**
 frontend/package-lock.json
-target/classes/com/whertotravel/security/config/SecurityConfig.class
-target/classes/com/whertotravel/security/config/SecurityConfig$1.class
-/.idea/
+target/**
+.idea/
 /docker/com/whertotravel/whertotravel/maven-metadata.xml.md5
