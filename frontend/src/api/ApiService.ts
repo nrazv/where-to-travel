@@ -1,9 +1,18 @@
-import axios from "./axios";
+import axiosInstance from "./axios";
 
 class ApiService {
-  get(path: string) {
+  get<T>(path: string) {
     return async () => {
-      const response = await axios.get(path);
+      const response = await axiosInstance.get<T>(path, {
+        withCredentials: true,
+      });
+      return response;
+    };
+  }
+
+  post<T>(path: string, body: Object) {
+    return async () => {
+      const response = await axiosInstance.post<T>(path, body);
       return response;
     };
   }

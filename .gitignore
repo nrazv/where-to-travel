@@ -97,4 +97,5 @@ Desktop.ini
 frontend/package-lock.json
 /docker/com/whertotravel/whertotravel/maven-metadata.xml.md5
 images/**
+target/
 targer/**

@@ -68,7 +68,7 @@ const Signup: React.FC = () => {
     setLoading(true);
     event.preventDefault();
     const response: AxiosResponse = await axios.post<AxiosResponse>(
-      `${process.env.REACT_APP_API_URL}/user`,
+      `${process.env.REACT_APP_API_URL}/auth/register`,
       user,
       {
         headers: {

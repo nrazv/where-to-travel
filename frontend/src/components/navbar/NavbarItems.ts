@@ -5,3 +5,7 @@ export const NavbarItems: NavbarItem[] = [
   { navLink: "/login", icon: "login", text: "Login" },
   { navLink: "/", icon: "home", text: "Home" },
 ];
+
+export const authenticatedNavbarItems: NavbarItem[] = [
+  { navLink: "/", icon: "home", text: "Home" },
+];

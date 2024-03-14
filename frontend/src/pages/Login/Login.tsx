@@ -1,17 +1,22 @@
 import { Alert, Button, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { UserCredentials } from "./UserCredentials";
-import loginRequest from "../../api/requests/loginRequest";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import { useAuthContext } from "../../contexts/AuthProvider";
+import { apiServiceProvider } from "../../api/ApiService";
+
+type JwtToken = {
+  token: string;
+};
 
 const Login = () => {
-  const navigate = useNavigate();
-  // const { auth, setAuth } = useAuthContext();
-
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [err, setError] = useState<boolean>(false);
+  const navigate = useNavigate();
+  const { setAuth } = useAuthContext();
+  const apiService = apiServiceProvider();
 
   useEffect(() => {
     setError(false);
@@ -22,12 +27,21 @@ const Login = () => {
     password: password,
   };
 
-  const loginUser = async (event: React.FormEvent<HTMLFormElement>) => {
+  const login = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     try {
-      const response = await loginRequest(credentials);
+      const authenticate = apiService.post<JwtToken>(
+        "auth/authenticate",
+        credentials
+      );
+      const response = await authenticate();
+
       if (response.status === 200) {
+        if (response.data.token) {
+          const jwtToken = response.data.token;
+          setAuth(jwtToken);
+        }
         navigate("/");
       }
     } catch (err) {
@@ -36,7 +50,7 @@ const Login = () => {
   };
 
   return (
-    <form className="form" onSubmit={loginUser}>
+    <form className="form" onSubmit={login}>
       <TextField
         onChange={(e) => setEmail(e.target.value)}
         type="input"

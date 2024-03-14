@@ -9,9 +9,10 @@ import { apiServiceProvider } from "../../api/ApiService";
 
 const HomePage: React.FC = () => {
   const apiService = apiServiceProvider();
-  const { error, isLoading, data } = useQuery<
-    AxiosResponse<DestinationResponse[]>
-  >(["destinations-all"], apiService.get("destination/all"));
+  const { error, isLoading, data } = useQuery(
+    ["destinations-all"],
+    apiService.get<DestinationResponse[]>("destination/all")
+  );
 
   if (error) {
     return (
